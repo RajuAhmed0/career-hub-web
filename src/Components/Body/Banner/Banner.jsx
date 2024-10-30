@@ -3,7 +3,7 @@ import React from 'react';
 const Banner = () => {
     return (
         <div>
-            <div className="flex max-w-[1320px] items-center justify-center mx-auto gap-[70px] mb-[130px]">
+            <div className="flex max-w-[1320px] items-center justify-center mx-auto  mb-[130px]">
                 <div className="w-[670px] text-left">
                     <h1 className="text-[80px] font-extrabold text-[#1A1919]">
                         One Step Closer To Your <span className="career-textAll">Dream Job</span>

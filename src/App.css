@@ -44,3 +44,10 @@ font-weight: 800;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.border1{
+border: 1px solid var(--Linear, #7E90FE);
+}
+ .bg-color{
+  background: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%);
+ }
