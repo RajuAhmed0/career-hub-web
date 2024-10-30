@@ -16,7 +16,7 @@ const Banner = () => {
                     </button>
                 </div>
                 <div className="mt-[41px]">
-                <img src={`/images/user.png`} alt="" className='w-[816px] h-[744px]'/>
+                <img src={`/images/user.png`} alt="" />
                 </div>
             </div>
         </div>
