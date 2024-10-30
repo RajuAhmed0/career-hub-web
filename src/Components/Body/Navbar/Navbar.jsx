@@ -44,7 +44,7 @@ const Navbar = () => {
                             {navOption}
                         </ul>
                     </div>
-                    <Link to={'/'} className="text-[32px] font-extrabold text-[#1A1919]">CareerHub</Link>
+                    <Link to={'/'} className="md:text-[32px] text-2xl font-extrabold text-[#1A1919]">CareerHub</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu-horizontal px-1 gap-6 font-medium text-[#757575]">
@@ -52,7 +52,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <button className="career-btn">Start Applying</button>
+                    <button className="career-btn lg:!text-xl md:!text-base !text-xs md:!px-7 md:!py-[19px] !px-4 !py-3">Start Applying</button>
                 </div>
             </div>
         </div>
