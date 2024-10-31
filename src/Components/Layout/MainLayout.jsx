@@ -13,11 +13,7 @@ const MainLayout = () => {
                 <Navbar></Navbar>
             </div>
             <Outlet></Outlet>
-           <div className='career-bg'>
-           <Banner></Banner>
-           </div>
-            <JobCategory></JobCategory>
-            <FeaturedJobs></FeaturedJobs>
+           
             <Footer></Footer>
         </div>
     );

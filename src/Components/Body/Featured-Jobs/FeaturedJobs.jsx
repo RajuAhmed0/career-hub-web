@@ -2,6 +2,7 @@ import { data } from 'autoprefixer';
 import React, { useEffect, useState } from 'react';
 import { AiOutlineDollar } from 'react-icons/ai';
 import { IoLocationOutline } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 
 const FeaturedJobs = () => {
 
@@ -11,7 +12,7 @@ const FeaturedJobs = () => {
 
 
     useEffect(() => {
-        fetch('./jobs.json')
+        fetch('jobs.json')
             .then(res => res.json())
             .then(data => setDatas(data))
     }, [])
@@ -24,7 +25,7 @@ const FeaturedJobs = () => {
             {!slice ?
                 <div className="grid lg:grid-cols-2 grid-cols-1  gap-6">
                     {datas?.slice(0, 4).map((job, index) => (
-                        <div key={index} className="border p-10 rounded-lg hover:shadow-lg">
+                        <div key={job.id} className="border p-10 rounded-lg hover:shadow-lg">
                             <div className=" items-center mb-2">
                                 <img src={job.logo} alt="" className="mb-8" />
                                 <h3 className="text-2xl font-extrabold text-[#474747]">{job.job_title}</h3>
@@ -44,7 +45,8 @@ const FeaturedJobs = () => {
                                     <p className="text-[#757575] text-xl font-semibold">Salary : {job.salary}</p>
                                 </div>
                             </div>
-                            <button className="!text-xl !font-extrabold text-white !px-[18px] !py-[11px] !rounded career-btn">View Details</button>
+                            <Link to={`job/${job.id}`} className="!text-xl !font-extrabold text-white !px-[18px] !py-[11px] !rounded career-btn">View Details</Link>
+
                         </div>
                     ))}
                 </div>
@@ -71,7 +73,8 @@ const FeaturedJobs = () => {
                                     <p className="text-[#757575] text-xl font-semibold">Salary : {job.salary}</p>
                                 </div>
                             </div>
-                            <button className="!text-xl !font-extrabold text-white !px-[18px] !py-[11px] !rounded career-btn">View Details</button>
+                            <Link to={`job/${job.id}`} className="!text-xl !font-extrabold text-white !px-[18px] !py-[11px] !rounded career-btn">View Details</Link>
+                            
                         </div>
 
                     ))}
