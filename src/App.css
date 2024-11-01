@@ -16,8 +16,23 @@ font-weight: 800;
   align-items: flex-start;
   gap: 10px;
 }
+.career-btn2 {
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  border-radius: 8px;
+font-weight: 800;
+  background: var(--Linear, linear-gradient(90deg, #7E90FE 0%, #9873FF 100%));
+  display: inline-flex;
+  padding: 19px ;
+  /* align-items: center; */
+  gap: 10px;
+}
 
 .career-btn:hover {
+  background: var(--Linear, linear-gradient(90deg, #7e8ffece 0%, #9873ffb8 100%));
+}
+.career-btn2:hover {
   background: var(--Linear, linear-gradient(90deg, #7e8ffece 0%, #9873ffb8 100%));
 }
 
@@ -55,4 +70,13 @@ border: 1px solid var(--Linear, #7E90FE);
 
  .border-b{
   background: linear-gradient(90deg, rgba(126, 144, 254, 0.20) 0%, rgba(152, 115, 255, 0.20) 100%);
+ }
+ .card-color{
+  background: linear-gradient(90deg, rgba(126, 144, 254, 0.10) 0%, rgba(152, 115, 255, 0.10) 100%);
+
+ }
+ .sn-border{
+  opacity: 0.3;
+  border: 1px solid var(--Linear, #7E90FE);
+
  }

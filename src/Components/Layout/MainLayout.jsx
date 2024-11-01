@@ -8,8 +8,8 @@ import { Outlet } from 'react-router-dom';
 
 const MainLayout = () => {
     return (
-        <div>
-            <div className='career-bg'>
+        <div className=''>
+            <div className='career-bg '>
                 <Navbar></Navbar>
             </div>
             <Outlet></Outlet>
