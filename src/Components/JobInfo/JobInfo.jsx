@@ -1,22 +1,21 @@
-import { useState } from "react";
 import { CiLocationOn, CiMail } from "react-icons/ci";
-import { GrLocation } from "react-icons/gr";
 import { IoCalendarOutline, IoCallOutline } from "react-icons/io5";
 import { PiCurrencyCircleDollarBold } from "react-icons/pi";
 import { useLoaderData, useParams } from "react-router-dom";
+import { setStorageItem } from "../Utility/LocalStorage";
 
 const JobInfo = () => {
     const jobsDatas = useLoaderData()
-    console.log(jobsDatas);
+    // console.log(jobsDatas);
     const params = useParams()
 
 
-    // Check if jobsDatas is defined and is an array before accessing its elements
+
     const jobDetailsData = jobsDatas && Array.isArray(jobsDatas)
         ? jobsDatas.find((jobData) => jobData.id === parseInt(params.id))
         : null;
 
-    // Render loading or error messages if jobDetailsData is not found
+
     if (!jobDetailsData) {
         return <p>Loading or Job not found...</p>;
     }
@@ -24,29 +23,27 @@ const JobInfo = () => {
     // const jobDetailsData = jobsDatas.find((jobData) => jobData.id === parseInt(params.id));
 
 
-    // const jobsDetails = useLoaderData()
-    // console.log(jobsDetails);
+    const applyHandelBtn = (id, title) => {
+        setStorageItem(id, title)
+        console.log(id);
+        console.log(title);
+        
+    }
 
-    // const params = useParams()
-
-
-    // if (jobsDetails.length > 0) {
-    //     const jobDetails = jobsDetails.find(job => job.id === parseInt(params.id))
-    //     // console.log(jobDetails);
-    // }
-
-
+    
 
 
     return (
-        <div className='relative'>
+        <div className=''>
             <div className='career-bg'>
-                <div className='absolute -top-2 right-0 lg:block hidden' >
-                    <img src="/images/bg2.png" alt="" />
-                </div>
-                <h1 className='text-[32px] text-[#1A1919] font-extrabold text-center'>Job Details</h1>
-                <div className='lg:block hidden '>
-                    <img src="/images/bg1.png" alt="" />
+                <div className="h-[250px]">
+                    <div className='absolute top-0 right-0 lg:block hidden' >
+                        <img src="/images/bg2.png" alt="" />
+                    </div>
+                    <h1 className='text-[32px] text-[#1A1919] font-extrabold text-center pt-11'>Job Details</h1>
+                    <div className='absolute  lg:block hidden '>
+                        <img src="/images/bg1.png" alt="" />
+                    </div>
                 </div>
 
                 <div className="max-w-[1320px] xl:mx-auto md:mx-3 mx-2 justify-between flex flex-col md:flex-row md:mt-[130px] mt-10 gap-6">
@@ -94,7 +91,7 @@ const JobInfo = () => {
                             </div>
 
                         </div>
-                        <button className=" flex justify-center mt-6  career-btn2 w-full">Apply Now</button>
+                        <button onClick={() => applyHandelBtn(jobDetailsData.id, jobDetailsData.job_title)} className=" flex justify-center mt-6  career-btn2 w-full">Apply Now</button>
                     </div>
 
                 </div>

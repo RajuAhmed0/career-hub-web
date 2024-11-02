@@ -9,7 +9,7 @@ import { Outlet } from 'react-router-dom';
 const MainLayout = () => {
     return (
         <div className=''>
-            <div className='career-bg '>
+            <div className='career-bg relative'>
                 <Navbar></Navbar>
             </div>
             <Outlet></Outlet>
